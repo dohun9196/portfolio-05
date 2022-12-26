@@ -27,6 +27,7 @@
     text-align: center;
     display: inline-block;
     font-size: 0;
+    margin: 0 50px 0 0;
 }
 
 .header .inner .headLogo {
@@ -58,6 +59,7 @@
     text-align: center;
     font-size: 15px;
     font-weight: 900px;
+    width: 120px;
 
 }
 
@@ -68,7 +70,7 @@
 .gnb>ul>li .dropdown {
     position: relative;
     top: 1px;
-    width: 120px;
+
 
     background: #000;
     transition: 0.5s;
@@ -145,4 +147,293 @@
     100% {
         transform: translateY(-10px);
     }
+}
+
+.mainInside {
+    padding: 100px 0;
+    background: #000;
+}
+
+.mainInside .insideTop {
+    width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.mainInside .insideTop {
+    background: url(../img/mainInside01.png) no-repeat center center/cover;
+    height: 300px;
+    background-size: 50%;
+
+}
+
+.mainInside .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainInside .inner .inside_img {
+    flex: 1;
+}
+
+.mainInside .inner .inside_img img {
+    height: 100%;
+}
+
+.mainInside .inner .inside_txt {
+    flex: 1;
+    padding: 30px;
+}
+
+.mainInside .inner .inside_txt h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    line-height: 35px;
+}
+
+.mainInside .inner .inside_txt p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #999;
+    word-break: keep-all;
+}
+
+.kawasakiSlide {
+    background: #000;
+    padding: 100px 0;
+}
+
+.kawasakibg {
+    background: #fff;
+}
+
+
+.kawasakiSlide .slideTitle {
+    background: #69be28;
+}
+
+.kawasakiSlide .slideTitle .inner {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1200px;
+    margin: 0 auto;
+
+
+    line-height: 50px;
+    color: #fff;
+}
+
+.slideTitle .inner .kawasaki_title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.slideTitle .inner .kawasaki_group ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.slideTitle .inner .kawasaki_group a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 10px;
+    display: block;
+
+}
+
+
+.kawasaki_group li:hover a::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 50px;
+    border-bottom: 1px solid#ddd;
+}
+
+.kawasakiSlide .inner {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.kawasakiSlide .inner .kawasaki_arrows {}
+
+.kawasakiSlide .inner .kawasaki_arrows a {
+    display: block;
+}
+
+.xi-angle-left {
+    position: absolute;
+    top: calc(702.75px / 2);
+    left: 0;
+    transform: translate(-100%, -50%);
+    z-index: 999;
+    font-size: 50px;
+    color: #69be28;
+    transition: 0.5s;
+}
+
+.xi-angle-right {
+    position: absolute;
+    top: calc(702.75px / 2);
+    right: 0;
+    transform: translate(100%, -50%);
+    z-index: 999;
+    font-size: 50px;
+    color: #69be28;
+    transition: 0.5s;
+}
+
+.xi-angle-left:hover {
+    transform: translate(-100%, -50%) scale(1.2);
+}
+
+.xi-angle-right:hover {
+    transform: translate(100%, -50%)scale(1.2);
+}
+
+
+.kawasaki_arrows .kawasakiSlide .inner .main_slide {
+    position: relative;
+
+}
+
+.kawasakiSlide .inner .main_slide img {
+    height: 75vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.kawasaki_spec {
+    width: 1200px;
+    margin: 0 auto;
+    color: #000;
+    padding: 50px 0 100px 0;
+}
+
+.kawasaki_spec p {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 30px 0;
+
+    border-top: 1px solid #69be28;
+}
+
+.kawasaki_spec Table {
+    width: 100%;
+    font-size: 16px;
+
+    text-align: left;
+}
+
+
+.kawasaki_spec .spec_left {
+    padding: 10px 50px 10px 0;
+    font-weight: 700;
+
+
+}
+
+.kawasaki_spec .spec_rigth {
+    padding: 10px 0px;
+
+}
+
+.kawasaki_spec .spec_rigth.n {
+    padding: 0 100px 0 0;
+}
+
+
+.kawasaki_spec .spec_left.r,
+.kawasaki_spec .spec_rigth.r {
+
+    line-height: 1.5;
+}
+
+.faceDesign {
+    padding: 100px 0;
+    background: #000;
+}
+
+.faceDesign .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.faceDesign .inner .title span {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+    z-index: 999;
+    padding: 0 20px;
+}
+
+.faceDesign .inner .title span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 1200px;
+    border: 1px solid #69be28;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+}
+
+.faceDesign .inner .design_pic {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 30px 0;
+}
+
+.faceDesign .inner .design_pic img {
+
+    display: block;
+}
+
+.design_pic .design01 {}
+
+.design_pic .design01:hover {
+
+    background-image: url(../img/design01_hover.jpg);
+
+}
+
+.design_pic .design02:hover {
+    background: url(../img/design02_hover.jpg);
+
+}
+
+.design_pic .design03:hover {
+    background: url(../img/design03_hover.jpg);
+
+}
+
+.faceDesign .inner .design_txt {
+    word-break: keep-all;
+}
+
+.design_txt p {
+    font-size: 25px;
+    margin: 0 0 30px 0;
+}
+
+.design_txt span {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #999;
 }

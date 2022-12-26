@@ -1,16 +1,27 @@
 $(function () {
 
-    $('.main_slide').slick({
+    $('.mainVisual .main_slide').slick({
+        dots: false,
+        autoplay: true,
+        arrows: false,
+
+
+        autoplaySpeed: 4000,
+
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+    });
+
+    $('.kawasakiSlide .main_slide').slick({
         dots: false,
         autoplay: true,
         arrows: true,
 
-
-        autoplaySpeed: 4000,
         prevArrow: $('#prev'),
         nextArrow: $('#next'),
-
-
+        autoplaySpeed: 4000,
         infinite: true,
         speed: 500,
         fade: true,
