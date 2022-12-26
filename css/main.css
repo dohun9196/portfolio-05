@@ -1,5 +1,5 @@
 * {
-    outline: 1px solid #f00;
+    -outline: 1px solid #f00;
 
 }
 
@@ -361,79 +361,438 @@
     line-height: 1.5;
 }
 
-.faceDesign {
+.faceYourslef {
     padding: 100px 0;
     background: #000;
 }
 
-.faceDesign .inner {
+.faceYourslef .design {
     width: 1200px;
     margin: 0 auto;
+    padding: 0 0 50px 0;
 }
 
-.faceDesign .inner .title span {
+.design .title span {
     position: relative;
     display: block;
     font-size: 40px;
     font-weight: 700;
     margin: 0 0 30px 0;
     text-align: center;
-    z-index: 999;
+
     padding: 0 20px;
 }
 
-.faceDesign .inner .title span::before {
+.design .title span::before {
     content: "";
     position: absolute;
     display: inline-block;
-    width: 1200px;
+    width: 520px;
     border: 1px solid #69be28;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 998;
+    left: 0%;
+    transform: translate(0%, -50%);
+
 }
 
-.faceDesign .inner .design_pic {
+.design .title span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 520px;
+    border: 1px solid #69be28;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+
+}
+
+.design .design_pic {
     display: flex;
     gap: 30px;
+    justify-content: space-between;
     margin: 0 0 30px 0;
 }
 
-.faceDesign .inner .design_pic img {
+.design .design_pic {}
 
+.design_pic .design01,
+.design_pic .design02,
+.design_pic .design03 {
+    position: relative;
+}
+
+
+.design_pic .design01:hover::after {
+    content: "";
     display: block;
-}
-
-.design_pic .design01 {}
-
-.design_pic .design01:hover {
-
-    background-image: url(../img/design01_hover.jpg);
-
-}
-
-.design_pic .design02:hover {
-    background: url(../img/design02_hover.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 285.3px;
+    background: url(../img/design01_hover.jpg)no-repeat center center/cover;
 
 }
 
-.design_pic .design03:hover {
-    background: url(../img/design03_hover.jpg);
-
+.design_pic .design02:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 285.3px;
+    background: url(../img/design02_hover.jpg)no-repeat center center/cover;
 }
 
-.faceDesign .inner .design_txt {
+.design_pic .design03:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 285.3px;
+    background: url(../img/design03_hover.jpg)no-repeat center center/cover;
+}
+
+
+.design .design_txt,
+.technology .technology_txt,
+.electronics .electronics_txt {
     word-break: keep-all;
 }
 
-.design_txt p {
-    font-size: 25px;
+.design_txt p,
+.technology_txt p,
+.electronics_txt p {
+    font-size: 20px;
     margin: 0 0 30px 0;
 }
 
-.design_txt span {
-    font-size: 17px;
+
+.design_txt span,
+.technology_txt span,
+.electronics_txt span {
+    display: block;
+    font-size: 16px;
     line-height: 1.5;
     color: #999;
+}
+
+.technology_txt span,
+.electronics_txt span {
+    margin: 0 0 30px 0;
+}
+
+.technology {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.technology .title span {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.technology .title span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 455px;
+    border: 1px solid #69be28;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+
+}
+
+.technology .title span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 455px;
+    border: 1px solid #69be28;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+
+}
+
+.technology .technology_pic {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+
+
+}
+
+.technology .technology_pic figure {
+    width: 585px;
+
+}
+
+.technology .technology_pic img,
+.technology .technology_subpic img {
+    margin: 0 0 30px 0;
+}
+
+.technology_pic .technology01,
+.technology_pic .technology02,
+.technology_pic .technology03,
+.technology_pic .technology04 {
+    position: relative;
+}
+
+.technology_pic .technology01:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 446.06px;
+    background: url(../img/technology01_hover.jpg)no-repeat center center/cover;
+
+}
+
+.technology_pic .technology02:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 446.06px;
+    background: url(../img/technology02_hover.jpg)no-repeat center center/cover;
+}
+
+.technology_pic .technology03:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 446.06px;
+    background: url(../img/tec-ele_hover.jpg)no-repeat center center/cover;
+}
+
+.technology_pic .technology04:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 446.06px;
+    background: url(../img/technology04_hover.jpg)no-repeat center center/cover;
+}
+
+
+.electronics {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.electronics .title span {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.electronics .title span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 455px;
+    border: 1px solid #69be28;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+
+}
+
+.electronics .title span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 455px;
+    border: 1px solid #69be28;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+
+}
+
+.technology_subpic {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.technology_subpic figure {
+    flex: 1;
+}
+
+.electronics .electronics_pic {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+
+
+}
+
+.electronics .electronics_pic figure {
+    width: 585px;
+
+}
+
+.electronics .electronics_pic img {
+    margin: 0 0 30px 0;
+}
+
+.electronics_pic .electronics01,
+.electronics_pic .electronics03 {
+    position: relative;
+}
+
+.electronics_pic .electronics01:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 413.61px;
+    background: url(../img/tec-ele_hover.jpg)no-repeat center center/cover;
+}
+
+.electronics_pic .electronics03:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 413.61px;
+    background: url(../img/tec-ele_hover.jpg)no-repeat center center/cover;
+}
+
+.mainGallery {
+
+    padding: 100px 0 50px 0;
+
+}
+
+.mainGallery .inner {
+    width: 1200px;
+    margin: 0 auto;
+
+
+}
+
+.mainGallery .inner .title {
+    border-top: 1px solid #69be28;
+    padding: 30px 0 0 0;
+}
+
+.mainGallery .inner .title h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+}
+
+.mainGallery .inner .gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #69be28;
+}
+
+.mainGallery .inner .gallery img {
+    width: 238px;
+    border: 1px solid #ddd;
+    margin: 1px;
+}
+
+.footer {
+    background: #000;
+}
+
+.footer .inner {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.footer .inner .footerLogo {
+    flex: 1 0 0%;
+    height: max-content;
+
+}
+
+.footer .inner .footerAddress {
+    flex: 1 0 70%;
+    text-align: left;
+}
+
+.footerAddress address span {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-size: 15px;
+
+    font-weight: 100;
+    margin: 0 30px 0 0;
+    padding: 10px 0;
+}
+
+.footerAddress address span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+    top: 50%;
+    right: -16px;
+    transform: translate(0, -50%);
+}
+
+.footerAddress address span:nth-child(4)::after {
+    content: none;
+}
+
+.footer .inner .footerAddress p {
+    font-style: normal;
+    font-size: 15px;
+
+    font-weight: 100;
+    padding: 10px 0;
 }
