@@ -3,6 +3,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     left: 0;
     right: 0;
@@ -10,7 +14,7 @@
     z-index: 999;
     border-bottom: 1px solid #69be28;
     z-index: 999;
-    background: #000;
+
 }
 
 .header .inner {
@@ -40,7 +44,7 @@
 
 .header .inner .gnb {
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 999;
     transition: 0.5s;
 }
@@ -72,7 +76,7 @@
     top: 1px;
 
 
-    background: #000;
+    background: #333;
     transition: 0.5s;
 }
 
@@ -140,18 +144,14 @@
 }
 
 @keyframes sc_dw {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-10px);
+    to {
+        top: 91%;
     }
 }
 
 .mainInside {
     padding: 100px 0;
-    background: #000;
+    background: #111;
 }
 
 .mainInside .insideTop {
@@ -202,7 +202,7 @@
 }
 
 .kawasakiSlide {
-    background: #000;
+    background: #111;
     padding: 100px 0;
 }
 
@@ -212,7 +212,16 @@
 
 
 .kawasakiSlide .slideTitle {
+
     background: #69be28;
+    z-index: 999;
+}
+
+.slideTitle.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .kawasakiSlide .slideTitle .inner {
@@ -267,15 +276,18 @@
 
 }
 
-.kawasakiSlide .inner .kawasaki_arrows {}
+.kawasakiSlide .inner .slide_box {
+    position: relative;
+}
 
 .kawasakiSlide .inner .kawasaki_arrows a {
+
     display: block;
 }
 
 .xi-angle-left {
     position: absolute;
-    top: calc(702.75px / 2);
+    top: 50%;
     left: 0;
     transform: translate(-100%, -50%);
     z-index: 999;
@@ -286,7 +298,7 @@
 
 .xi-angle-right {
     position: absolute;
-    top: calc(702.75px / 2);
+    top: 50%;
     right: 0;
     transform: translate(100%, -50%);
     z-index: 999;
@@ -312,7 +324,9 @@
 .kawasakiSlide .inner .main_slide img {
     height: 75vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+
+
 }
 
 .kawasaki_spec {
@@ -363,7 +377,7 @@
 
 .faceYourslef {
     padding: 100px 0;
-    background: #000;
+    background: #111;
 }
 
 .faceYourslef .design {
@@ -533,8 +547,10 @@
     flex-wrap: wrap;
     margin: 0 0 30px 0;
     justify-content: space-between;
+}
 
-
+.technology .technology_pic .tec_box {
+    flex: 1;
 }
 
 .technology .technology_pic figure {
@@ -561,7 +577,7 @@
     top: 0;
     left: 0;
     width: 585px;
-    height: 446.06px;
+    height: 437.38px;
     background: url(../img/technology01_hover.jpg)no-repeat center center/cover;
 
 }
@@ -573,7 +589,7 @@
     top: 0;
     left: 0;
     width: 585px;
-    height: 446.06px;
+    height: 439.2px;
     background: url(../img/technology02_hover.jpg)no-repeat center center/cover;
 }
 
@@ -734,9 +750,11 @@
 }
 
 .mainGallery .inner .gallery img {
+
     width: 238px;
     border: 1px solid #ddd;
     margin: 1px;
+
 }
 
 .footer {
