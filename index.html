@@ -8,9 +8,13 @@
     <title>kawasaki</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/lightbox.min.js"></script>
+    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -55,7 +59,10 @@
 
         <main>
             <section id="Main_Visual" class="mainVisual">
-                <div class="main_slide">
+                <div id="background" class="player" data-property="{
+                    videoURL:'https://www.youtube.com/watch?v=mv2TBPPJAvI'}">
+                </div>
+                <!-- <div class="main_slide">
                     <figure class="slide01">
 
                     </figure>
@@ -63,7 +70,7 @@
                     <figure class="slide02">
 
                     </figure>
-                </div>
+                </div> -->
 
                 <div class="down_con">
                     <a href="#mainInside">
@@ -93,6 +100,9 @@
             </section>
 
             <section class="kawasakiSlide">
+                <div class="slide_bg">
+                    hidden
+                </div>
                 <div class="kawasakibg">
                     <div class="slideTitle">
                         <div class="inner">
@@ -143,6 +153,7 @@
                                 </figure>
                             </div>
                         </div>
+
                         <div id="kawasaki_spec" class="kawasaki_spec">
 
                             <table>
@@ -455,21 +466,52 @@
                         <h2>GAWASAKI NINJA GALLERY</h2>
                     </div>
                     <div class="gallery">
-                        <img src="./img/gallery01.jpg" alt="">
-                        <img src="./img/gallery02.jpg" alt="">
-                        <img src="./img/gallery03.jpg" alt="">
-                        <img src="./img/gallery04.jpg" alt="">
-                        <img src="./img/gallery05.jpg" alt="">
-                        <img src="./img/gallery06.jpg" alt="">
-                        <img src="./img/gallery07.jpg" alt="">
-                        <img src="./img/gallery08.jpg" alt="">
-                        <img src="./img/gallery09.jpg" alt="">
-                        <img src="./img/gallery10.jpg" alt="">
-                        <img src="./img/gallery11.jpg" alt="">
-                        <img src="./img/gallery12.jpg" alt="">
-                        <img src="./img/gallery13.jpg" alt="">
-                        <img src="./img/gallery14.jpg" alt="">
-                        <img src="./img/gallery15.jpg" alt="">
+                        <a href="./img/gallery01.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery01.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery02.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery02.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery03.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery03.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery04.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery04.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery05.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery05.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery06.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery06.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery07.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery07.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery08.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery08.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery09.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery09.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery10.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery10.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery11.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery11.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery12.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery12.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery13.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery13.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery14.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery14.jpg" alt="">
+                        </a>
+                        <a href="./img/gallery15.jpg" data-lightbox="roadtrip">
+                            <img src="./img/gallery15.jpg" alt="">
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -486,7 +528,6 @@
                         <span>대표이사 : 김재일</span>
                         <span>사업자등록번호 : 204-81-12238</span>
                         <p>COPYRIGHT (C) 2022 DAIJEON MACHINERY Co. Ltd. All RIGHT RESERVED</p>
-
                     </address>
                 </div>
             </div>
