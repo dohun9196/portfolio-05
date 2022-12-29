@@ -16,6 +16,7 @@ $(function () {
 
     $('#background').YTPlayer({
         mute: true,
+        radio: 'auto',
         showControls: false,
         useOnMobile: true,
         quality: 'highres',
