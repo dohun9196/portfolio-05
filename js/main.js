@@ -62,7 +62,7 @@ $(function () {
         console.log(scrollValue);
     });
 
-    $(window).scroll(function (c) {
+    $(window).scroll(function () {
         var height = $(document).scrollTop();
 
         if (height > 1967) {
@@ -80,11 +80,54 @@ $(function () {
         // 'disableScrolling': true,  
         // { 이게 있으면 over, close 되었을 때 x축으로 스크롤바 생김 }
         'alwaysShowClose': true,
-        'maxWidth': 1200,
-        'maxHeight': 800,
+        // 'maxWidth': 1200,
+        // 'maxHeight': 800,
         'fitImagesInViewport': true,
 
     })
+    $('.top_btn a').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    });
+    $("#top_btn").scrollTop(0);
+
+    $(window).resize(function () {
+        if (window.innerWidth > 769) {
+            $(window).scroll(function (c) {
+                var height = $(document).scrollTop();
+
+                if (height > 1309) {
+                    $('.slideTitle').addClass('fix');
+                } else if (height < 1309) {
+                    $('.slideTitle').removeClass('fix');
+                }
+            })
+        }
+    });
+
+    $('.mbtn').on('click', function () {
+        $(this).toggleClass('on')
+        $('.gnb').toggleClass('on')
+    });
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($(window).width() < 769) {
+            e.preventDefault();
+            $(this).parent().siblings().find('.dropdown').hide();
+            $(this).next().toggle();
+        }
+    });
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) {
+            $('.dropdown').removeAttr('style');
+        }
+    });
+
+
+
 });
 
 

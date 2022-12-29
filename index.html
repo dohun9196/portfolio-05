@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css?ver=20221229">
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/lightbox.min.js"></script>
     <script src="./js/jquery.mb.YTPlayer.min.js"></script>
-    <script src="./js/main.js" defer></script>
+    <script src="./js/main.js?ver=20221229" defer></script>
 </head>
 
 <body>
     <div class="Wrap">
 
-        <header class="header">
+        <header id="header" class="header">
             <div class="inner">
                 <h1>
-                    <a href="#!">
+                    <a href="/">
                         <img class="headLogo" src="./img/headerLogo.png" alt="" srcset="">
                     </a>
                 </h1>
@@ -33,28 +33,30 @@
                     <ul>
                         <li><a href="#!">모델안내</a>
                             <ul class="dropdown">
-                                <li><a href="">모터사이클</a></li>
-                                <li><a href="">제트스키</a></li>
+                                <li><a href="#!">모터사이클</a></li>
+                                <li><a href="#!">제트스키</a></li>
                             </ul>
                         </li>
                         <li><a href="#!">딜러 찾기</a>
                             <ul class="dropdown">
-                                <li><a href="">모터사이클 대리점</a></li>
-                                <li><a href="">제트스키 대리점</a></li>
+                                <li><a href="#!">모터사이클 대리점</a></li>
+                                <li><a href="#!">제트스키 대리점</a></li>
                             </ul>
                         </li>
                         <li><a href="#!">서비스</a>
                             <ul class="dropdown">
-                                <li><a href="">고객센터</a></li>
-                                <li><a href="">구매보증</a></li>
-                                <li><a href="">다운로드</a></li>
+                                <li><a href="#!">고객센터</a></li>
+                                <li><a href="#!">구매보증</a></li>
+                                <li><a href="#!">다운로드</a></li>
                             </ul>
                         </li>
                         <li><a href="#!">뉴스&amp;이벤트</a></li>
                         <li><a href="#!">히스토리</a></li>
                     </ul>
                 </nav>
-
+                <div class="mbtn">
+                    <button><i class="xi-bars"></i></button>
+                </div>
             </div>
         </header>
 
@@ -156,63 +158,133 @@
                         </div>
 
                         <div id="kawasaki_spec" class="kawasaki_spec">
+                            <div class="table_pc">
+                                <table>
+                                    <thead>
+                                        <p>차량제원</p>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="spec_left">엔진형식</th>
+                                            <th class="spec_rigth n">수랭 직렬 4기통</th>
+                                            <th rowspan="2" class="spec_left r">브레이크</th>
+                                            <th rowspan="2" class="spec_rigth r">전륜 ø330 mm 듀얼 세미 플로팅 디스크 / 브램보 M50
+                                                모노블럭<br>후륜
+                                                ø220 mm 싱글 디스크
+                                            </th>
+                                        </tr>
 
-                            <table>
-                                <thead>
-                                    <p>차량제원</p>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="spec_left">엔진형식</th>
-                                        <th class="spec_rigth n">수랭 직렬 4기통</th>
-                                        <th rowspan="2" class="spec_left r">브레이크</th>
-                                        <th rowspan="2" class="spec_rigth r">전륜 ø330 mm 듀얼 세미 플로팅 디스크 / 브램보 M50
-                                            모노블럭<br>후륜
-                                            ø220 mm 싱글 디스크
-                                        </th>
-                                    </tr>
+                                        <tr>
+                                            <th class="spec_left">배기량</th>
+                                            <th class="spec_rigth n">998cc</th>
+                                        </tr>
 
-                                    <tr>
-                                        <th class="spec_left">배기량</th>
-                                        <th class="spec_rigth n">998cc</th>
-                                    </tr>
+                                        <tr>
+                                            <td class="spec_left">압축비</td>
+                                            <td class="spec_rigth n">13.0:1</td>
+                                            <td rowspan="2" class="spec_left">서스펜션</td>
+                                            <td rowspan="2" class="spec_rigth r">전륜 SHOWA ø43 mm BFF(Balance Free Front
+                                                Fork)
+                                                풀어저스터블 도립식 포크<br>후륜
+                                                SHOWA BFRC lite(Balance Free Rear Cushion) 풀어저스터블 쇽업쇼버 </td>
+                                        </tr>
 
-                                    <tr>
-                                        <td class="spec_left">압축비</td>
-                                        <td class="spec_rigth n">13.0:1</td>
-                                        <td rowspan="2" class="spec_left">서스펜션</td>
-                                        <td rowspan="2" class="spec_rigth r">전륜 SHOWA ø43 mm BFF(Balance Free Front
-                                            Fork)
-                                            풀어저스터블 도립식 포크<br>후륜
-                                            SHOWA BFRC lite(Balance Free Rear Cushion) 풀어저스터블 쇽업쇼버 </td>
-                                    </tr>
+                                        <tr>
+                                            <td class="spec_left">최고출력</td>
+                                            <td class="spec_rigth n">203ps(149.3 kW) / 13,200rpm</td>
+                                        </tr>
 
-                                    <tr>
-                                        <td class="spec_left">최고출력</td>
-                                        <td class="spec_rigth n">203ps(149.3 kW) / 13,200rpm</td>
-                                    </tr>
+                                        <tr>
+                                            <td class="spec_left">최대토크</td>
+                                            <td class="spec_rigth n">114.9 Nm(11.7kgf.m) / 11,400rpm</td>
+                                            <td rowspan="2" class="spec_left r">타이어</td>
+                                            <td rowspan="2" class="spec_rigth r">전륜 120/70ZR17M/C (58W)<br>후륜
+                                                190/55ZR17M/C
+                                                (75W)</td>
+                                        </tr>
 
-                                    <tr>
-                                        <td class="spec_left">최대토크</td>
-                                        <td class="spec_rigth n">114.9 Nm(11.7kgf.m) / 11,400rpm</td>
-                                        <td rowspan="2" class="spec_left r">타이어</td>
-                                        <td rowspan="2" class="spec_rigth r">전륜 120/70ZR17M/C (58W)<br>후륜 190/55ZR17M/C
-                                            (75W)</td>
-                                    </tr>
+                                        <tr>
+                                            <td class="spec_left">시트고</td>
+                                            <td class="spec_rigth n">835mm</td>
+                                        </tr>
 
-                                    <tr>
-                                        <td class="spec_left">시트고</td>
-                                        <td class="spec_rigth n">835mm</td>
-                                    </tr>
+                                        <tr>
+                                            <td class="spec_left">연료탱크 용량</td>
+                                            <td class="spec_rigth n">17 litres</td>
+                                            <td class="spec_left">건조중량</td>
+                                            <td class="spec_rigth">207 kg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                                    <tr>
-                                        <td class="spec_left">연료탱크 용량</td>
-                                        <td class="spec_rigth n">17 litres</td>
-                                        <td class="spec_left">건조중량</td>
-                                        <td class="spec_rigth">207 kg</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table_mo">
+                                <table>
+                                    <thead>
+                                        <p>차량제원</p>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>엔진형식</td>
+                                            <td class="T2">수랭 직렬 4기통</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>브레이크</td>
+                                            <td class="T2">전륜 ø330 mm 듀얼 세미 플로팅 디스크 / 브램보 M50 모노블럭 후륜 ø220 mm 싱글 디스크
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>배기량</td>
+                                            <td class="T2">998cc</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>압축비</td>
+                                            <td class="T2">13.0:1</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>서스펜션</td>
+                                            <td class="T2">전륜 SHOWA ø43 mm BFF(Balance Free Front Fork) 풀어저스터블 도립식 포크
+                                                후륜 SHOWA BFRC lite(Balance Free Rear Cushion) 풀어저스터블 쇽업쇼버
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>최고출력</td>
+                                            <td class="T2">203ps(149.3 kW) / 13,200rpm</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>최대토크</td>
+                                            <td class="T2">114.9 Nm(11.7kgf.m) / 11,400rpm</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>타이어</td>
+                                            <td class="T2">전륜 120/70ZR17M/C (58W)후륜 190/55ZR17M/C (75W)</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>시트고</td>
+                                            <td class="T2">835mm</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>연료용량</td>
+                                            <td class="T2">17 litres</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>건조중량</td>
+                                            <td class="T2">207 kg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
             </section>
@@ -549,6 +621,13 @@
             </div>
             <div class="copy">
                 <p>&copy; 2022 DAIJEON MACHINERY Co. Ltd. All RIGHT RESERVED</p>
+            </div>
+            <div id="top_btn" class="top_btn">
+                <a href="#header">
+                    <figure>
+                        <img src="./img/i_up.png" alt="">
+                    </figure>
+                </a>
             </div>
         </footer>
 
