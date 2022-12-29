@@ -94,7 +94,7 @@ $(function () {
     $("#top_btn").scrollTop(0);
 
     $(window).resize(function () {
-        if (window.innerWidth > 769) {
+        if (window.innerWidth < 769) {
             $(window).scroll(function (c) {
                 var height = $(document).scrollTop();
 
