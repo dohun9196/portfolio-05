@@ -2,19 +2,19 @@
 
 $(function () {
 
-    $('#background').YTPlayer({
-        mute: true,
-        radio: 'auto',
-        showControls: false,
-        useOnMobile: true,
-        quality: 'highres',
-        containment: '#background',
-        loop: true,
-        autoPlay: true,
-        stopMovieOnBlur: false,
-        startAt: 0,
-        opacity: 1,
-    });
+    // $('#background').YTPlayer({
+    //     mute: true,
+    //     radio: 'auto',
+    //     showControls: false,
+    //     useOnMobile: true,
+    //     quality: 'highres',
+    //     containment: '#background',
+    //     loop: true,
+    //     autoPlay: true,
+    //     stopMovieOnBlur: false,
+    //     startAt: 0,
+    //     opacity: 1,
+    // });
 
     $('.kawasakiSlide .main_slide').slick({
         dots: false,
@@ -45,20 +45,73 @@ $(function () {
         return false;
     });
 
+    //이벤트 상시 대기
+    $(window).load(function () {
+        console.log("onload : start");
+    });
+
     $(window).scroll(function () {
         var scrollValue = $(document).scrollTop();
         console.log(scrollValue);
     });
 
-    $(window).scroll(function () {
-        var height = $(document).scrollTop();
+    // $(window).scroll(function () {
+    //     var height = $(document).scrollTop();
 
-        if (height > 1967) {
-            $('.slideTitle').addClass('fix');
-        } else if (height < 1967) {
-            $('.slideTitle').removeClass('fix');
+    //     if (height > 2100) {
+    //         $('.slideTitle').addClass('fix');
+    //     } else if (height < 2100) {
+    //         $('.slideTitle').removeClass('fix');
+    //     }
+    // });
+
+    // $(window).on('resize', function () {
+    //     if ($(window).width() > 769) {
+    //         $(window).scroll(function () {
+    //             var mheight = $(document).scrollTop();
+
+    //             if (mheight > 1461) {
+    //                 $('.slideTitle').addClass('fix');
+    //             } else if (mheight < 1461) {
+    //                 $('.slideTitle').removeClass('fix');
+    //             }
+    //         })
+    //     }
+    // });
+
+
+
+
+    $(window).resize(function () {
+        if (window.innerWidth > 769) {
+            // 다바이스 크기가 769이상일때 
+            $(window).scroll(function () {
+                var height = $(document).scrollTop();
+
+                if (height > 2100) {
+                    $('.slideTitle').addClass('fix');
+                } else if (height < 2100) {
+                    $('.slideTitle').removeClass('fix');
+                }
+            })
+
+        } else {
+            // 다바이스 크기가 769이하일때 
+            $(window).scroll(function () {
+                var mheight = $(document).scrollTop();
+
+                if (mheight > 1461) {
+                    $('.slideTitle').addClass('fix');
+                } else if (mheight < 1461) {
+                    $('.slideTitle').removeClass('fix');
+                }
+            })
+
         }
-    });
+
+    }).resize();
+
+
 
 
     lightbox.option({
@@ -72,7 +125,8 @@ $(function () {
         // 'maxHeight': 800,
         'fitImagesInViewport': true,
 
-    })
+    });
+
     $('.top_btn a').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -81,19 +135,6 @@ $(function () {
     });
     $("#top_btn").scrollTop(0);
 
-    $(window).resize(function () {
-        if (window.innerWidth < 769) {
-            $(window).scroll(function (c) {
-                var height = $(document).scrollTop();
-
-                if (height > 1309) {
-                    $('.slideTitle').addClass('fix');
-                } else if (height < 1309) {
-                    $('.slideTitle').removeClass('fix');
-                }
-            })
-        }
-    });
 
     $('.mbtn').on('click', function () {
         $(this).toggleClass('on')
