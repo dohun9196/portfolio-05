@@ -594,6 +594,10 @@ html {
     margin: 0 0 30px 0;
 }
 
+.technology .technology_subpic img {
+    height: 285px;
+}
+
 .technology_pic .technology01,
 .technology_pic .technology02,
 .technology_pic .technology03,
