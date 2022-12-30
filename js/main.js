@@ -1,18 +1,6 @@
+
+
 $(function () {
-
-    // $('.mainVisual .main_slide').slick({
-    //     dots: false,
-    //     autoplay: true,
-    //     arrows: false,
-
-
-    //     autoplaySpeed: 4000,
-
-    //     infinite: true,
-    //     speed: 500,
-    //     fade: true,
-    //     cssEase: 'linear',
-    // });
 
     $('#background').YTPlayer({
         mute: true,
