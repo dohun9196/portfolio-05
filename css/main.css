@@ -513,9 +513,12 @@ html {
 .technology_txt p,
 .electronics_txt p {
     font-size: 20px;
-    margin: 30px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
+.electronics_txt p {
+    margin: 30px 0 30px 0;
+}
 
 .design_txt span,
 .technology_txt span,
