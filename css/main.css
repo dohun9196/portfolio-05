@@ -513,7 +513,7 @@ html {
 .technology_txt p,
 .electronics_txt p {
     font-size: 20px;
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0;
 }
 
 
@@ -1462,7 +1462,7 @@ html {
     .technology_txt p,
     .electronics_txt p {
         font-size: 20px;
-        margin: 0 0 30px 0;
+        margin: 30px 0 30px 0;
         text-align: center;
     }
 
