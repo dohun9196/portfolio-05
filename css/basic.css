@@ -1,0 +1,124 @@
+input,
+button,
+textarea {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    color: #444;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex_inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.main_title {
+    margin: 0 0 50px 0;
+}
+
+.main_title h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.main_title span {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.main_title strong {
+    display: block;
+    font-size: 50px;
+    margin: 0 0 10px 0;
+}
+
+.main_title p {
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+
+.content_tit {
+    position: relative;
+    height: 40px;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.content_tit span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+
+    width: auto;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    padding: 0 30px;
+    background: #1d1d20;
+    z-index: 10;
+}
+
+.content_tit::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    border: 1px solid #69be28;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.content_desc {
+    margin: 0 0 50px 0;
+}
+
+.content_desc span {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.content_desc p {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #d0d0d0;
+}
+
+.fy_pic {
+    margin: 0 0 50px 0;
+}
+
+@media(max-width:768px) {
+
+    .content_desc {
+        padding: 0 20px;
+    }
+}

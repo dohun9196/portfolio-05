@@ -105,12 +105,23 @@ $(function () {
                 } else if (mheight < 1461) {
                     $('.slideTitle').removeClass('fix');
                 }
+                else {
+                    $('.slideTitle').removeClass('fix');
+                }
             })
 
         }
     }).resize();
 
-
+    $(window).scroll(function () {
+        var height = $(document).scrollTop();
+        if (height > 700) {
+            $('.top_btn').addClass('on');
+        }
+        else (
+            $('.top_btn').removeClass('on')
+        )
+    })
 
 
     lightbox.option({
@@ -129,10 +140,11 @@ $(function () {
     $('.top_btn a').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
+        }, 1200);
         return false;
+
     });
-    $("#top_btn").scrollTop(0);
+
 
 
     $('.mbtn').on('click', function () {
