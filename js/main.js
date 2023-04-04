@@ -1,5 +1,3 @@
-
-
 $(function () {
 
     // $('#background').YTPlayer({
@@ -43,11 +41,6 @@ $(function () {
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 400);
         return false;
-    });
-
-    //이벤트 상시 대기
-    $(window).load(function () {
-        console.log("onload : start");
     });
 
     $(window).scroll(function () {
