@@ -889,7 +889,7 @@ html {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    flex-direction: column;
+
     justify-content: space-between;
 }
 
@@ -908,6 +908,12 @@ html {
 }
 
 @media(max-width:768px) {
+    .electronics .electronics_pic {
+
+        flex-direction: column;
+
+    }
+
     .electronics .electronics_pic figure {
         width: 100%;
         overflow: hidden;
