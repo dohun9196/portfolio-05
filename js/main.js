@@ -55,18 +55,21 @@ $(function () {
         console.log(scrollValue);
     });
 
-    // $(window).scroll(function () {
-    //     var height = $(document).scrollTop();
+    // $(window).resize(function () {
+    //     if (window.innerWidth > 769) {
+    //         // 다바이스 크기가 769이상일때 
+    //         $(window).scroll(function () {
+    //             var height = $(document).scrollTop();
 
-    //     if (height > 2100) {
-    //         $('.slideTitle').addClass('fix');
-    //     } else if (height < 2100) {
-    //         $('.slideTitle').removeClass('fix');
-    //     }
-    // });
+    //             if (height > 2100) {
+    //                 $('.slideTitle').addClass('fix');
+    //             } else if (height < 2100) {
+    //                 $('.slideTitle').removeClass('fix');
+    //             }
+    //         })
 
-    // $(window).on('resize', function () {
-    //     if ($(window).width() > 769) {
+    //     } else {
+    //         // 다바이스 크기가 769이하일때 
     //         $(window).scroll(function () {
     //             var mheight = $(document).scrollTop();
 
@@ -75,43 +78,47 @@ $(function () {
     //             } else if (mheight < 1461) {
     //                 $('.slideTitle').removeClass('fix');
     //             }
+    //             else {
+    //                 $('.slideTitle').removeClass('fix');
+    //             }
     //         })
+
     //     }
-    // });
-
-
+    // }).resize();
 
 
     $(window).resize(function () {
+        var slideTitle = $('.slideTitle');
+        var heightThreshold = 2100;
+        var mheightThreshold = 1461;
+
         if (window.innerWidth > 769) {
-            // 다바이스 크기가 769이상일때 
-            $(window).scroll(function () {
+            $(window).off('scroll').on('scroll', function () {
                 var height = $(document).scrollTop();
 
-                if (height > 2100) {
-                    $('.slideTitle').addClass('fix');
-                } else if (height < 2100) {
-                    $('.slideTitle').removeClass('fix');
+                if (height > heightThreshold) {
+                    slideTitle.addClass('fix');
+                } else if (height < heightThreshold) {
+                    slideTitle.removeClass('fix');
                 }
-            })
-
+            });
         } else {
-            // 다바이스 크기가 769이하일때 
-            $(window).scroll(function () {
+            $(window).off('scroll').on('scroll', function () {
                 var mheight = $(document).scrollTop();
 
-                if (mheight > 1461) {
-                    $('.slideTitle').addClass('fix');
-                } else if (mheight < 1461) {
-                    $('.slideTitle').removeClass('fix');
+                if (mheight > mheightThreshold) {
+                    slideTitle.addClass('fix');
+                } else if (mheight < mheightThreshold) {
+                    slideTitle.removeClass('fix');
+                } else {
+                    slideTitle.removeClass('fix');
                 }
-                else {
-                    $('.slideTitle').removeClass('fix');
-                }
-            })
-
+            });
         }
-    }).resize();
+    });
+
+    $(window).trigger('resize'); // 초기 로드 시 이벤트 트리거
+
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
