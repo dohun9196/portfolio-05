@@ -55,6 +55,8 @@ html {
 .header .inner {
     position: relative;
     display: flex;
+    gap: 60px;
+    justify-content: space-between;
     width: 1200px;
     height: 90px;
     margin: 0 auto;
@@ -64,7 +66,6 @@ html {
 .header .inner h1 {
     display: inline-block;
     text-align: center;
-
     font-size: 0;
     margin: 0 50px 0 0;
 }
